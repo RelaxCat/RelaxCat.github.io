@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../Framework/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../asset/hand-icon.png" type="image/x-icon">
+    <script src="../Framework/JQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header"></div>
+    </header>
+    
+    <main id="main-container">
+        <div class="image-container">
+            <img src="" class="detail-img" id="display-img">
+        </div>
+
+        <div class="row gallery">
+        </div>
+        <div class="main-detail">
+            <section class="first-sec">
+                <div class="left-side">
+                    <h5 class="project-title"></h5>
+                    <div class="type-main-container"></div>
+                    <p class="left-desc">Created: <b class="side-ans"></b></p>
+                    <p class="left-desc" id="git-section">Git Link: <a href="" class="get-link" id="git-link"></a></p>
+                </div>
+                
+                <div class="right-side">
+                    <div class="tools"></div>
+                    <div class="download-project" id="download-button">
+                        <img src="../asset/download-icon.png" class="logo-dl">
+                        Download
+                    </div>
+                </div>
+            </section>
+
+            <section class="back-project">
+                <h5 class="project-title">Background</h5>
+                <p class="text-project" id="background-text"></p>
+
+            </section>
+
+            <section class="back-project">
+                <h5 class="project-title">Solution</h5>
+                <p class="text-project" id="solution-text"></p>
+            </section>
+
+            <section class="back-project" id="prototype-section">
+                <h5 class="project-title">Prototype</h5>
+                <iframe class="figma-frame" src="" allowfullscreen></iframe>
+                <p class="left-desc">Prototype Link: <a href="" class="get-link" id="figma-link">Click Here</a></p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+</body>
+<script src="../javascript/mobile.js"></script>
+<script src="../javascript/project-list.js"></script>
+<script src="../javascript/tool-list.js"></script>
+<script src="../javascript/project-detail.js"></script>
+<script src="../javascript/download.js"></script>
+<script src="../javascript/home.js"></script>
+</html>

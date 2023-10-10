@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="../Framework/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../asset/hand-icon.png" type="image/x-icon">
+    <script src="../Framework/JQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header"></div>
+    </header>
+
+    <main class="main-project">
+        <section class="latest">
+            <h3 class="sec-project">Latest Projects</h3>
+            <div class="latest-list" id="latest-container">
+            </div>
+        </section>
+
+        <section class="all-project">
+            <div class="filter">
+                <select name="type" class="type-filter">
+                    <option value="all" class="options-type">All</option>
+                    <option value="ui/ux design" class="options-type">UI/UX Design</option>
+                    <option value="website" class="options-type">Website</option>
+                    <option value="mobile" class="options-type">Mobile</option>
+                </select>
+                <select name="date" class="date-filter">
+                    <option value="recent" class="options-type">Recent</option>
+                    <option value="oldest" class="options-type">Oldest</option>
+                </select>
+            </div>
+            
+            <div class="latest-list" id="project-container">
+            </div>
+        </section>        
+    </main>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+</body>
+<script src="../javascript/script.js"></script>
+<script src="../javascript/project-list.js"></script>
+<script src="../javascript/project.js"></script>
+<script src="../javascript/project-detail.js"></script>
+</html>
