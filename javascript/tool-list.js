@@ -26,11 +26,6 @@ var tools = [
     },
     {
         toolId: 'TL006',
-        toolName: 'Tailwind CSS',
-        toolImage: '../asset/tailwind-css-icon.png'
-    },
-    {
-        toolId: 'TL007',
         toolName: 'Java',
         toolImage: '../asset/java-icon.png'
     },
@@ -41,11 +36,6 @@ var tools = [
     },
     {
         toolId: 'TL009',
-        toolName: 'Flutter',
-        toolImage: '../asset/flutter-icon.png'
-    },
-    {
-        toolId: 'TL010',
         toolName: 'JQuery',
         toolImage: '../asset/jquery-icon.png'
     },

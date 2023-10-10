@@ -49,37 +49,8 @@ function featuredProjectList() {
     });
 }
 
-function softwareList() {
-    const softwareContainer = document.getElementById("software-container");
-    let isOdd = true;
-
-    tools.forEach((tool, index) => {
-        if (tool.toolId) {
-            const softwareCard = document.createElement("div");
-            softwareCard.className = `software-card ${isOdd ? 'one' : 'two'}`;
-
-            const softwareImage = document.createElement("img");
-            softwareImage.src = tool.toolImage;
-            softwareImage.className = "soft-icon";
-
-            const softwareTitle = document.createElement("p");
-            softwareTitle.className = "soft-title";
-            softwareTitle.textContent = tool.toolName;
-
-            softwareCard.appendChild(softwareImage);
-            softwareCard.appendChild(softwareTitle);
-            softwareContainer.appendChild(softwareCard);
-
-            if ((index + 2) % 2 === 1) {
-                isOdd = !isOdd;
-            }
-        }
-    });
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     populateDetail();
 });
 
 featuredProjectList();
-softwareList();

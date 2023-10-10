@@ -10,8 +10,10 @@ function populateDetail () {
         const projectDate = document.querySelector(".side-ans");
         const projectGitLink = document.getElementById('git-link');
         const projectImage = document.querySelector(".detail-img");
+        const projectIntroduction = document.getElementById('introduction-text');
         const projectBackground = document.getElementById('background-text');
-        const projectSolution = document.getElementById('solution-text');
+        const projectSummary = document.getElementById('summary-text');
+        const projectWebsiteLink = document.getElementById('website-link');
         const projectPrototypeFrame = document.querySelector(".figma-frame");
         const projectPrototypeLink = document.getElementById('figma-link');
         const imageContainer = document.querySelector('.gallery');
@@ -20,10 +22,10 @@ function populateDetail () {
 
         projectTitle.innerHTML = projectData.projectName;
         projectDate.textContent = projectData.projectDate;
-        projectGitLink.href = projectData.projectLink;
         projectImage.src = projectData.projectImage;
+        projectIntroduction.innerHTML = projectData.projectIntroduction;
         projectBackground.innerHTML = projectData.projectBackground;
-        projectSolution.innerHTML = projectData.projectSolution;
+        projectSummary.innerHTML = projectData.projectSummary;
 
         mainTypeContainer.innerHTML = "";
         imageContainer.innerHTML = '';
@@ -76,6 +78,13 @@ function populateDetail () {
         } else {
             const gitSection = document.getElementById('git-section');
             gitSection.style.display = "none";
+        }
+
+        if(projectData.projectWebsite){
+            projectWebsiteLink.href = projectData.projectWebsite;
+        } else {
+            const webSection = document.getElementById('website-section');
+            webSection.style.display = "none";
         }
 
         if (projectData.projectPrototype) {

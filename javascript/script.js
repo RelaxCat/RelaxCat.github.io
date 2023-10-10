@@ -29,3 +29,15 @@ $(function () {
     $("#footer").load("../model/footer.html", function () {});
 
 });
+let height = screen.height;
+let height2 = '50vh';
+window.addEventListener(
+    "scroll",
+    () => {
+      document.body.style.setProperty(
+        "--scroll",
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight - window.screen.height)
+      );
+    },
+    false
+  );
