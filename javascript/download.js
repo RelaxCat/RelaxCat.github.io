@@ -4,7 +4,7 @@ function downloadProject() {
     const projectId = urlParams.get('projectId');
     const projectData = projects.find(project => project.projectId === projectId);
 
-    if (projectData.downloadButton) {
+    if (projectData.downloadLink) {
         downloadButton.addEventListener('click', function() {
             window.location.href = projectData.downloadLink;
         });
