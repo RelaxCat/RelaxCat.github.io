@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const buttonHome = document.querySelectorAll('.button-link-home');
   const featureCards = document.querySelectorAll('.feature-body');
   const projectCards = document.querySelectorAll('.latest-list');
+  const toolCards = document.querySelectorAll('.tools');
+  const detailText = document.querySelectorAll('.left-detail');
+  const downloadButton = document.querySelectorAll('.download-project');
+  const textProject = document.querySelectorAll('.text-project');
+  const imgGallery = document.querySelectorAll('.row.gallery');
 
   function addVisible(elements) {
       elements.forEach(element => {
@@ -26,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
   addVisible(profilePict);
   addVisible(featureCards);
   addVisible(projectCards);
+  addVisible(toolCards);
+  addVisible(detailText);
+  addVisible(downloadButton);
+  addVisible(textProject);
+  addVisible(imgGallery);
 
   function checkScroll() {
       addVisible(skillCards);
@@ -36,6 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
       addVisible(profilePict);
       addVisible(featureCards);
       addVisible(projectCards);
+      addVisible(toolCards);
+      addVisible(detailText);
+      addVisible(downloadButton);
+      addVisible(textProject);
+      addVisible(imgGallery);
   }
 
   window.addEventListener('scroll', checkScroll);

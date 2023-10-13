@@ -80,13 +80,6 @@ function populateDetail () {
             gitSection.style.display = "none";
         }
 
-        if(projectData.projectWebsite){
-            projectWebsiteLink.href = projectData.projectWebsite;
-        } else {
-            const webSection = document.getElementById('website-section');
-            webSection.style.display = "none";
-        }
-
         if (projectData.projectPrototype) {
             projectPrototypeFrame.src = projectData.projectPrototype;
             projectPrototypeLink.href = projectData.projectProtoLink;
