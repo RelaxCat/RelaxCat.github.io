@@ -875,6 +875,10 @@ footer{
     margin: 5vh auto;
     box-sizing: border-box;
     width: 50vw;
+
+    display: flex;
+    column-gap: 1vw;
+
     opacity: 0;
     transform: translateY(50px);
 }
@@ -899,6 +903,8 @@ footer{
 .img-container{
     position: relative;
     padding: 0%;
+    max-width: 15vw;
+    overflow: hidden;
 }
 
 .overlay-gallery {
@@ -925,6 +931,22 @@ footer{
 .img-container:hover .overlay-gallery, .img-container.active .overlay-gallery {
     display: none;
 }
+
+.img-gallery:hover{
+    animation: kenburns-top 0.5s ease-out alternate both;
+    border-radius: 5px;
+}
+
+@keyframes kenburns-top {
+    0% {
+      transform: scale(1) translateY(0);
+      transform-origin: 50% 16%;
+    }
+    100% {
+      transform: scale(1.1) translateY(-5px);
+      transform-origin: top;
+    }
+  }
 
 .first-sec{
     display: flex;
