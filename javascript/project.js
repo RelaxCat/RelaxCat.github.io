@@ -85,7 +85,6 @@ function projectList() {
             return selectedDate === "oldest" ? dateA - dateB : dateB - dateA;
         });
 
-
         filteredProjects.forEach(project => {
             if(project.projectId) {
                 const categories = project.projectCategory.split(', ');

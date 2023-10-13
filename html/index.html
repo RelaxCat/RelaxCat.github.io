@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" href="../asset/hand-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="landing-body">
-    <main class="landing">
-        <h1 class="intro">Welcome To My Portfolio!</h1>
-        <p class="quest">before we get started, what is your name?</p>
-        <input class="guest-name" type="text" placeholder="insert your name..." >
-        <button id="continue-welcome" class="next">Continue</button>
+    <main id="particles-js">
+        <div class="landing">
+            <h1 class="intro">Welcome To My Portfolio!</h1>
+            <p class="quest">before we get started, what is your name?</p>
+            <input class="guest-name" type="text" placeholder="insert your name..." >
+            <p id="warning-message">Name can't be longer than 30 characters.</p>
+            <button id="continue-welcome" class="next" disabled>Continue</button>
+        </div>
     </main>
 </body>
+    <script src="../Framework/Particle JS/particles.js"></script>
+    <script src="../Framework/Particle JS/app.js"></script>
+    <script src="../javascript/index.js"></script>
+    <script>
+        particlesJS.load('particles-js', '../Framework/Particle JS/particlesjs-config-white.json', function() {
+        });
+    </script>
 </html>
