@@ -11,7 +11,7 @@ function featuredProjectList() {
       </div>
     `;
 
-    const featureContainer = document.getElementById("feature-container");
+    const featureContainer = document.getElementById('feature-container');
 
     sliceProjects.forEach(project => {
 
@@ -23,22 +23,22 @@ function featuredProjectList() {
             .replace("{{projectName}}", project.projectName)
             .replace("{{projectDescription}}", project.projectDescription);
 
-        const featureCard = document.createElement("div");
-        featureCard.className = "feature-card";
+        const featureCard = document.createElement('div');
+        featureCard.className = 'feature-card';
         featureCard.innerHTML = cardHTML;
 
-        const typeFeatureContainer = featureCard.querySelector(".type-feature-container");
+        const typeFeatureContainer = featureCard.querySelector('.type-feature-container');
         categories.forEach(category => {
 
             if (category.toLowerCase().trim() !== 'featured') {
-                const typeFeature = document.createElement("p");
-                typeFeature.className = "type-feature";
+                const typeFeature = document.createElement('p');
+                typeFeature.className = 'type-feature';
                 typeFeature.textContent = category.trim();
                 typeFeatureContainer.appendChild(typeFeature);
             }
         });
 
-        featureCard.addEventListener("click", function() {
+        featureCard.addEventListener('click', function() {
 
             const projectId = project.projectId;
 
@@ -49,7 +49,7 @@ function featuredProjectList() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     populateDetail();
 });
 

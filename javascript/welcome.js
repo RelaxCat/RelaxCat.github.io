@@ -14,6 +14,6 @@ function welcomeScreen () {
 
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     welcomeScreen();
 });

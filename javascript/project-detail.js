@@ -5,29 +5,33 @@ function populateDetail () {
     const projectData = projects.find(project => project.projectId === projectId);
 
     if (projectData) {
-        const projectTitle = document.querySelector(".project-title");
-        const mainTypeContainer = document.querySelector(".type-main-container");
-        const projectDate = document.querySelector(".side-ans");
-        const projectGitLink = document.getElementById('git-link');
-        const projectImage = document.querySelector(".detail-img");
+        const projectTitle = document.querySelector('.project-title');
+        const projectLogo = document.querySelector('.logo-icon');
+        const mainTypeContainer = document.querySelector('.type-main-container');
+        const projectDate = document.querySelector('.side-ans');
+        const projectImage = document.querySelector('.detail-img');
+        const imageContainer = document.querySelector('.gallery');
+        const gitLink = document.getElementById('git-button');
+        const demoLink = document.getElementById('live-web');
+        const figmaLink = document.getElementById('figma-button');
         const projectIntroduction = document.getElementById('introduction-text');
         const projectBackground = document.getElementById('background-text');
         const projectSummary = document.getElementById('summary-text');
-        const projectWebsiteLink = document.getElementById('website-link');
-        const projectPrototypeFrame = document.querySelector(".figma-frame");
-        const projectPrototypeLink = document.getElementById('figma-link');
-        const imageContainer = document.querySelector('.gallery');
+        const projectPrototypeFrame = document.querySelector('.figma-frame');
 
         document.title = projectData.projectName;
+
+        projectLogo.href = projectData.projectLogo;
 
         projectTitle.innerHTML = projectData.projectName;
         projectDate.textContent = projectData.projectDate;
         projectImage.src = projectData.projectImage;
+
         projectIntroduction.innerHTML = projectData.projectIntroduction;
         projectBackground.innerHTML = projectData.projectBackground;
         projectSummary.innerHTML = projectData.projectSummary;
 
-        mainTypeContainer.innerHTML = "";
+        mainTypeContainer.innerHTML = '';
         imageContainer.innerHTML = '';
 
         const imageSource = projectData.projectImage.split(', ');
@@ -66,41 +70,51 @@ function populateDetail () {
         const categories = projectData.projectCategory.split(', ');
         categories.forEach(category => {
             if (category.toLowerCase().trim() !== 'featured') {
-                const typeProject = document.createElement("p");
-                typeProject.className = "type-project";
+                const typeProject = document.createElement('p');
+                typeProject.className = 'type-project';
                 typeProject.textContent = category.trim();
                 mainTypeContainer.appendChild(typeProject);
             }
         });
 
         if(projectData.projectLink) {
-            projectGitLink.textContent = projectData.projectLink;
+            gitLink.href = projectData.projectLink;
         } else {
-            const gitSection = document.getElementById('git-section');
-            gitSection.style.display = "none";
+            gitLink.style.display = 'none';
+        }
+
+        if(projectData.projectWebsite) {
+            demoLink.href = projectData.projectWebsite;
+        } else {
+            demoLink.style.display = 'none';
+        }
+
+        if(projectData.projectProtoLink) {
+            figmaLink.href = projectData.projectProtoLink;
+        } else {
+            figmaLink.style.display = 'none';
         }
 
         if (projectData.projectPrototype) {
             projectPrototypeFrame.src = projectData.projectPrototype;
-            projectPrototypeLink.href = projectData.projectProtoLink;
         } else {
             const prototypeSection = document.getElementById('prototype-section');
-            prototypeSection.style.display = "none";
+            prototypeSection.style.display = 'none';
         }
         
-        const toolsContainer = document.querySelector(".tools");
+        const toolsContainer = document.querySelector('.tools');
         if (projectData.projectTool) {
             const projectTools = projectData.projectTool.split(', ');
             projectTools.forEach(projectToolName => {
                 const toolData = tools.find(tool => tool.toolName.toLowerCase() === projectToolName.toLowerCase().trim());
         
                 if (toolData) {
-                    const toolCard = document.createElement("div");
-                    toolCard.className = "tool-card";
+                    const toolCard = document.createElement('div');
+                    toolCard.className = 'tool-card';
         
-                    const toolIcon = document.createElement("img");
+                    const toolIcon = document.createElement('img');
                     toolIcon.src = toolData.toolImage;
-                    toolIcon.className = "tool-icon";
+                    toolIcon.className = 'tool-icon';
         
                     toolCard.appendChild(toolIcon);
                     toolsContainer.appendChild(toolCard);
@@ -114,16 +128,16 @@ function populateDetail () {
 
 function activeImage(img) {
 
-    var expandImg = document.getElementById("display-img");
-    var imgContainers = document.querySelectorAll(".img-container");
+    var expandImg = document.getElementById('display-img');
+    var imgContainers = document.querySelectorAll('.img-container');
 
-    imgContainers[0].classList.add("active");
+    imgContainers[0].classList.add('active');
 
     expandImg.src = img.src;
 
     imgContainers.forEach(function(container) {
-        container.classList.remove("active");
+        container.classList.remove('active');
     });
 
-    img.parentElement.classList.add("active");
+    img.parentElement.classList.add('active');
 }

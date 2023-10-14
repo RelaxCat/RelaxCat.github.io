@@ -782,6 +782,14 @@ footer{
     margin-bottom: 5%;
 }
 
+project-filter{
+    margin-bottom: 5%;
+}
+
+.menu-title>.sub-menu:not(last-child){
+    margin-bottom: 5vh;
+}
+
 .project-footer>.foot-body>.sub-menu:last-child{
     font-size: 1vw;
     color: var(--accent);
@@ -940,8 +948,8 @@ footer{
 }
 
 .img-gallery:hover{
-    animation: kenburns-top 0.5s ease-out alternate both;
     border-radius: 5px;
+    animation: kenburns-top 0.5s ease-out alternate both;
 }
 
 @keyframes kenburns-top {

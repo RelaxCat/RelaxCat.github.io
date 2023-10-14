@@ -12,7 +12,7 @@ function latestProjectList() {
     </div>
     `;
 
-    const latestContainer = document.getElementById("latest-container");
+    const latestContainer = document.getElementById('latest-container');
 
     latestProjects.forEach(project => {
 
@@ -24,22 +24,22 @@ function latestProjectList() {
             .replace("{{projectName}}", project.projectName)
             .replace("{{projectDescription}}", project.projectDescription);
 
-        const latestCard = document.createElement("div");
-        latestCard.className = "latest-card";
+        const latestCard = document.createElement('div');
+        latestCard.className = 'latest-card';
         latestCard.innerHTML = cardHTML;
 
-        const typeLatestContainer = latestCard.querySelector(".type-latest-container");
+        const typeLatestContainer = latestCard.querySelector('.type-latest-container');
         categories.forEach(category => {
 
             if (category.toLowerCase() !== 'featured') {
-                const typeLatest = document.createElement("p");
-                typeLatest.className = "type-latest";
+                const typeLatest = document.createElement('p');
+                typeLatest.className = 'type-latest';
                 typeLatest.textContent = category;
                 typeLatestContainer.appendChild(typeLatest);
             }
         });
 
-        latestCard.addEventListener("click", function() {
+        latestCard.addEventListener('click', function() {
 
             const projectId = project.projectId;
 
@@ -61,28 +61,28 @@ function projectList() {
     </div>
     `;
 
-    const projectContainer = document.getElementById("project-container");
+    const projectContainer = document.getElementById('project-container');
     
-    const typeFilter = document.querySelector(".type-filter");
-    const dateFilter = document.querySelector(".date-filter");
+    const typeFilter = document.querySelector('.type-filter');
+    const dateFilter = document.querySelector('.date-filter');
 
     function updateProjectCards() {
 
         const selectedType = typeFilter.value.toLowerCase();
         const selectedDate = dateFilter.value.toLowerCase();
 
-        projectContainer.innerHTML = "";
+        projectContainer.innerHTML = '';
 
         const filteredProjects = projects
         .filter(project => {
             const projectTypes = project.projectCategory.split(', ').map(type => type.trim().toLowerCase());
-            const typeMatch = selectedType === "all" || projectTypes.includes(selectedType);
+            const typeMatch = selectedType === 'all' || projectTypes.includes(selectedType);
             return typeMatch;
         })
         .sort((a, b) => {
             const dateA = new Date(a.projectDate);
             const dateB = new Date(b.projectDate);
-            return selectedDate === "oldest" ? dateA - dateB : dateB - dateA;
+            return selectedDate === 'oldest' ? dateA - dateB : dateB - dateA;
         });
 
         filteredProjects.forEach(project => {
@@ -95,22 +95,22 @@ function projectList() {
                     .replace("{{projectName}}", project.projectName)
                     .replace("{{projectType}}", project.projectType);
 
-                const projectCard = document.createElement("div");
-                projectCard.className = "latest-card";
+                const projectCard = document.createElement('div');
+                projectCard.className = 'latest-card';
                 projectCard.innerHTML = cardHTML;
 
-                const typeProjectContainer = projectCard.querySelector(".type-project-container");
+                const typeProjectContainer = projectCard.querySelector('.type-project-container');
                 categories.forEach(category => {
 
                     if (category.toLowerCase() !== 'featured') {
-                        const typeProject = document.createElement("p");
-                        typeProject.className = "type-project";
+                        const typeProject = document.createElement('p');
+                        typeProject.className = 'type-project';
                         typeProject.textContent = category;
                         typeProjectContainer.appendChild(typeProject);
                     }
                 });
 
-                projectCard.addEventListener("click", function() {
+                projectCard.addEventListener('click', function() {
 
                     const projectId = project.projectId;
 
@@ -122,13 +122,13 @@ function projectList() {
         });
     }
 
-    typeFilter.addEventListener("change", updateProjectCards);
-    dateFilter.addEventListener("change", updateProjectCards);
+    typeFilter.addEventListener('change', updateProjectCards);
+    dateFilter.addEventListener('change', updateProjectCards);
     
     updateProjectCards();
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     populateDetail();
 });
 
