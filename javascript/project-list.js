@@ -2,7 +2,7 @@ var projects = [
     {
         projectId: 'PR00001',
         projectName: 'THE TECH DEN',
-        projectLogo: '../asset/techden-logo.png',
+        projectLogo: '../Asset/techden-logo.png',
         projectImage: '../banner/techden-banner.png, ../banner/techden-banner2.png, ../banner/techden-banner3.png',
         projectType: 'Computer Hardware and Software E-Commerce',
         projectCategory: 'Website, Featured, UI/UX Design',
@@ -21,7 +21,7 @@ var projects = [
     {
         projectId: 'PR00002',
         projectName: 'LVinnamon',
-        projectLogo: '',
+        projectLogo: '../Asset/lvinnamon-logo.png',
         projectImage: '../banner/lvinnamon-banner.png, ../banner/lvinnamon-banner2.png, ../banner/lvinnamon-banner3.png',
         projectType: 'LVinnamon Company Profile Website Development',
         projectCategory: 'Website, Featured',
@@ -33,14 +33,14 @@ var projects = [
         projectIntroduction: 'Welcome to LVinnamon, where the aroma of freshly baked cinnamon rolls and the warmth of a good cup of tea or coffee come together to create a delightful experience. We are a globally renowned business specializing in the art of crafting and serving the most delectable cinnamon-infused treats, along with a selection of quality beverages. Our journey has been filled with the sweet scent of cinnamon and the joy of sharing our passion for baked goods with the world.',
         projectBackground: 'At LVinnamon, our story begins with a love for cinnamon, a spice that has been cherished for its warm and comforting flavor for centuries. We took this timeless ingredient and turned it into something truly magical–mouthwatering cinnamon rolls, cakes, and cookies that leave a lasting impression. With branches scattered across the globe, we have had the privilege of serving our delicious creations to cinnamon enthusiasts from all walks of life.<br><br> Our commitment to quality and taste is unwavering. Each cinnamon roll, cake, and cookie that leaves our ovens is a testament to our dedication to culinary excellence. We carefully select the finest ingredients, ensuring that every bite is a perfect balance of flavors and textures.<br><br>But there\'s more to discover on our website. We\'re thrilled to announce our exclusive "Happy Hour" tradition, held every Wednesday and Friday from 2 PM to 5 PM. During these magical hours, you can enjoy special deals and discounts on your favorite treats and beverages, making your visit to LVinnamon even sweeter. <br><br>Whether you\'re a cinnamon enthusiast, a lover of baked goods, or simply in search of a cozy spot to enjoy a cup of tea or coffee, LVinnamon welcomes you with open arms. Our commitment to providing a warm and inviting atmosphere, paired with irresistible flavors, remains at the heart of everything we do.',
         projectSummary: 'LVinnamon is a global destination for cinnamon-inspired treats. From our famous cinnamon rolls to cakes, cookies, and aromatic beverages, we bring the warmth of cinnamon to your palate. Our online presence now introduces our exclusive "Happy Hour" every Wednesday and Friday, 2 PM to 5 PM, offering special deals. Join us in savoring the essence of LVinnamon, where cinnamon becomes a delightful journey of taste and community.',
-        projectWebsite: 'https://relaxcat.github.io/LVinnamon/home.html',
+        projectWebsite: 'https://relaxcat.github.io/LVinnamon/index.html',
         projectPrototype: '',
         projectProtoLink: ''
     },
     {
         projectId: 'PR00003',
         projectName: 'Pestor',
-        projectLogo: '',
+        projectLogo: '../Asset/pestor-logo.png',
         projectImage: '../banner/pestor-banner.png, ../banner/pestor-banner2.png, ../banner/pestor-banner3.png',
         projectType: 'UI/UX Design for the Pestor App',
         projectCategory: 'UI/UX Design, Featured',

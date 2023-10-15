@@ -855,6 +855,19 @@ project-filter{
     box-shadow: var(--shadow-soft);
 }
 
+.type-filter:focus{
+    outline: none;
+}
+
+select:focus > option:checked { 
+    background: var(--accent) !important;
+    color: var(--secondary);
+}
+
+select:hover{
+    cursor: pointer;
+}
+
 .options-type{
     color: var(--primary);
 }
@@ -1034,12 +1047,13 @@ project-filter{
     display: flex;
     justify-content: flex-end;
     column-gap: 5%;
-    flex-shrink: 0;
     opacity: 0;
     transform: translateY(50px);
+    flex-shrink: 0;
 }
 
 .tool-card{
+    flex-shrink: 0;
     flex-basis: 5vw;
     background-color: var(--secondary);
     border-radius: 8px;
@@ -1175,7 +1189,7 @@ project-filter{
     margin-bottom: 5%;
 }
 
-.edu-section{
+.edu-section, .soft-section{
     margin-bottom: 7%;
 }
 
@@ -1187,43 +1201,6 @@ project-filter{
     font-weight: 500;
     color: #949494;
     font-size: 1vw;
-}
-
-.exp-sec{
-    font-size: 1.2vw;
-    margin-bottom: 3%;
-}
-
-.company-name{
-    font-weight: 700;
-}
-
-.company-place{
-    font-weight: 500;
-}
-
-.company-desc{
-    margin: 0%;
-}
-
-.exp-date{
-    margin-bottom: 1%;
-}
-
-.exp-date,.exp-example li{
-    color: #949494;
-    font-weight: 500;
-}
-
-.exp-example li{
-    margin-left: 5%;
-    list-style: none;
-}
-
-.exp-example li:before{ 
-    content: "•"; 
-    font-size: 1.2vw;
-    margin-right: 1.5%; 
 }
 
 .col-md-4{
@@ -1263,7 +1240,7 @@ project-filter{
     font-size: 1.2vw;
     list-style: none;
     font-weight: 500;
-    margin: 2% 0%;
+    margin: 1.5vh 0%;
 }
 
 .skill-list:before{ 
@@ -1271,6 +1248,8 @@ project-filter{
     font-size: 1.2vw;
     margin: 0% 3%;
 }
+
+/* Hambuger Menu */
 
 .mobile-menu-button {
     display: none;
@@ -1282,7 +1261,7 @@ project-filter{
     left: 0;
     width: 0;
     height: 100vh; 
-    background-color: #303030;
+    background-color: var(--primary);
     overflow-x: hidden;
     z-index: 1;
     transition: 0.5s;
@@ -1299,7 +1278,7 @@ project-filter{
 .bar {
     width: 2.7vw;
     height: 0.5vh;
-    background-color: #333;
+    background-color: var(--secondary);
     margin: 3px 0;
     transition: 0.4s;
 }
@@ -1320,14 +1299,14 @@ project-filter{
     top: 0;
     right: 3vw;
     font-size: 4.5vw;
-    color: #FFA133;
+    color: var(--accent);
   }
 
 .mobile-link-nav{
     padding: 2vh 8vw 2vh 5vw;
     text-decoration: none;
     font-size: 2.5vw;
-    color: #FFA133;
+    color: var(--secondary);
     display: block;
     transition: 0.3s;
     z-index: 2;
@@ -1335,7 +1314,8 @@ project-filter{
   }
 
   .mobile-link-nav:hover{
-      color: #FAFAFA;
+    background-color: var(--accent);
+      color: var(--primary);
   }
 
 .mobile-menu>.top{

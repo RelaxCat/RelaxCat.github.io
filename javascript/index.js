@@ -21,6 +21,7 @@ function indexInput() {
             continueButton.disabled = true;
         } else if (name.length === 0) {
             inputMessage.innerHTML = 'Name can\'t be longer than 30 characters.';
+            inputMessage.classList.remove('danger');
             continueButton.disabled = true;
         } else {
             continueButton.disabled = false;
