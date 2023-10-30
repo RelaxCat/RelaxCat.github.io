@@ -6,15 +6,13 @@ $(function () {
         document.getElementById(currentPage).classList.add('active');
 
         const mobileMenuButton = document.getElementById('hamburger');
-        console.log(mobileMenuButton);
         const mobileMenu = document.getElementById('mobile-menu');
         const overlay = document.getElementById('overlay');
         const closeMenuButton = document.getElementById('closebtn');
 
         mobileMenuButton.addEventListener('click', function () {
-            console.log('Hamburger clicked');
             mobileMenu.classList.toggle('active');
-            document.getElementById('mobile-menu').style.width = '40vw';
+            document.getElementById('mobile-menu').style.width = 'fit-content';
             overlay.style.display = mobileMenu.classList.contains('active') ? 'block' : 'none';
         });
 

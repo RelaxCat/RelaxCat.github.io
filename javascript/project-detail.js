@@ -27,10 +27,6 @@ function populateDetail () {
         projectDate.textContent = projectData.projectDate;
         projectImage.src = projectData.projectImage;
 
-        projectIntroduction.innerHTML = projectData.projectIntroduction;
-        projectBackground.innerHTML = projectData.projectBackground;
-        projectSummary.innerHTML = projectData.projectSummary;
-
         mainTypeContainer.innerHTML = '';
         imageContainer.innerHTML = '';
 
@@ -76,6 +72,27 @@ function populateDetail () {
                 mainTypeContainer.appendChild(typeProject);
             }
         });
+
+        if (projectData.projectIntroduction) {
+            projectIntroduction.innerHTML = projectData.projectIntroduction;
+        } else{
+            const projectIntroSection = document.getElementById('intro-section');
+            projectIntroSection.style.display = 'none';
+        }
+        
+        if (projectData.projectBackground) {
+            projectBackground.innerHTML = projectData.projectBackground;
+        } else {
+            const projectBackSection = document.getElementById('back-section');
+            projectBackSection.style.display = 'none';
+        }
+        
+        if (projectData.projectSummary) {
+            projectSummary.innerHTML = projectData.projectSummary;
+        } else {
+            const projectSummarySection = document.getElementById('summary-section');
+            projectSummarySection.style.display = 'none';
+        }
 
         if(projectData.projectLink) {
             gitLink.href = projectData.projectLink;

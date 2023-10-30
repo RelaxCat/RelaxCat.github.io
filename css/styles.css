@@ -1,0 +1,372 @@
+/* @import "../Framework/Bootstrap/css/bootstrap.min.css"; */
+
+:root {
+  --text: #041115;
+  --background: #f6fcfe;
+  --primary: #3c4253;
+  --secondary: #eae3e1;
+  --tertiary: #9a7165;
+  --accent: #a5abbd;
+  --warning: #fdc630;
+  --danger: #ff3030;
+  --shadow-soft: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+br {
+  content: '\n';
+  display: block;
+  margin-top: 2vh;
+}
+
+*,
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: Poppins;
+  color: var(--text);
+}
+
+a:hover {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--background);
+  min-height: 100vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.landing-body {
+  margin: 0;
+  background-color: var(--primary);
+}
+
+#welcome-body {
+  background-color: var(--accent);
+}
+
+#particles-js {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.landing {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  text-transform: uppercase;
+  font-size: 2.5vw;
+  text-align: center;
+  color: var(--secondary);
+}
+
+.quest {
+  font-size: 1.2vw;
+  color: var(--secondary);
+  opacity: 0.8;
+}
+
+.guest-name {
+  border: none;
+  background-color: transparent;
+  margin-top: 2vh;
+  font-size: 1.1vw;
+  text-align: center;
+  padding-bottom: 0.8vh;
+  border-bottom: transparent solid 2px;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.guest-name::placeholder {
+  color: var(--secondary);
+  opacity: 0.4;
+}
+
+.guest-name:hover,
+.guest-name:focus {
+  border-bottom: var(--accent) solid 2px;
+}
+
+.guest-name:focus {
+  outline: none;
+}
+
+#warning-message {
+  padding-top: 1vh;
+  font-weight: 500;
+  color: var(--warning);
+  font-size: 1vw;
+  display: none;
+}
+
+#warning-message.danger {
+  color: var(--danger);
+}
+
+.next {
+  width: 35%;
+  margin-top: 5vh;
+  padding: 1.5vh 3vw;
+  border-radius: 8px;
+  border: none;
+  box-shadow: var(--shadow-soft);
+  font-size: 1vw;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.next:focus {
+  outline: none;
+}
+
+.intro.wel,
+.quest.wel {
+  color: var(--primary);
+}
+
+.quest.wel {
+  opacity: 0.7;
+}
+
+.landing.wel > .next {
+  background-color: var(--primary);
+  color: var(--secondary);
+  transition: 0.5s ease 0s;
+}
+
+.landing.wel > .next:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+nav {
+  background-color: var(--primary);
+  font-size: 1.3rem;
+}
+
+.navbar-nav {
+  column-gap: 2vw;
+}
+
+.nav-link {
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.nav-item:hover .nav-link {
+  background-color: var(--secondary);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-item.active .nav-link {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--primary);
+  overflow-x: hidden;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.closebtn {
+  position: absolute;
+  top: 1vh;
+  right: 5vw;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.mobile-link-nav {
+  padding: 2vh 8vw 2vh 5vw;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--secondary);
+  display: block;
+  transition: 0.3s;
+  z-index: 2;
+  font-weight: 600;
+  width: 100%;
+}
+
+.mobile-link-nav:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.mobile-menu > .top {
+  margin-top: 10vh;
+}
+
+/* HOME */
+
+.main-home, .main-project, .main-detail, .main-cv{
+    margin: 10em 3em;
+}
+
+.main-home>.row{
+    justify-content: space-evenly;
+}
+
+.col-lg-4.d-none.d-lg-block.profile-pict{
+    padding: 0;
+    margin: 0 1vw;
+
+    max-width: 25em;
+    border-radius: 7px;
+    object-fit: cover;
+    flex-grow: 1;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+}
+
+.profile-pict{
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.profile-pict.visible{
+    opacity: 1;
+    transform: translateY(0px);
+    animation: home-profile 1s ease-out 0s 1 normal forwards;
+}
+
+.col-lg-8.col{
+    margin-top: 5em;
+}
+
+.intro-name, .intro-desc{
+    color: var(--text);
+}
+
+.intro-name{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2vh;
+}
+
+.intro-poss{
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--tertiary);
+}
+
+.anim-home{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.anim-home.visible{
+    opacity: 1;
+    transform: translateY(0);
+    animation: home-text 1s ease-out 0s 1 normal forwards;
+}
+
+.intro-desc{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 5vh;
+}
+
+.button-home{
+    width: 30em;
+    margin-top: 10vh;
+}
+
+.button-item-home{
+    flex-basis: 24%;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.button-link-home{
+    width: 15vw;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.10);
+    padding: 3vh 2vw;
+    font-size: 1.2vw;
+    display: flex;
+    align-items: center;
+    column-gap: 0.55vw;
+    font-weight: 600;
+    border-radius: 5px;
+    color: var(--text);
+    background-color: var(--secondary);
+    fill: var(--text);
+    transition: 0.5s ease 0s;
+}
+
+.button-link-home{
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.button-link-home.visible{
+    opacity: 1;
+    transform: translateY(0);
+    animation: home-button 1s ease-out 0s 1 normal forwards;
+}
+
+@media screen and (max-width: 986px) {
+  .col-lg-8.col{
+    margin-top: 0em;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  header > .navbar {
+    align-items: center;
+  }
+
+  .container-fluid > .navbar-brand {
+    display: none;
+  }
+
+  .main-home, .main-project, .main-detail, .main-cv{
+    margin-top: 6em;
+  }
+
+}
