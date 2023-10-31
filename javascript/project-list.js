@@ -81,7 +81,7 @@ var projects = [
         projectLogo: '../Asset/weathernow-logo.png',
         projectImage: '../banner/weathernow-banner.png, ../banner/weathernow-banner2.png, ../banner/weathernow-banner3.png',
         projectType: 'Weather App Development for Real-Time Weather Updates and Forecasts',
-        projectCategory: 'Website, Featured',
+        projectCategory: 'Website, Featured, UI/UX Design',
         projectDate: '17 Oct 2023',
         projectDescription: 'The Weather App provides up-to-the-minute weather updates and current conditions to keep you informed about what\'s happening in your area',
         projectTool: 'HTML, CSS, Javascript, React',
