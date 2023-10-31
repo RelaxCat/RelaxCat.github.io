@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   const skillCards = document.querySelectorAll('.skill-card');
-  const softUpCards = document.querySelectorAll('.software-card.up');
-  const softDownCards = document.querySelectorAll('.software-card.down');
+  const softCards = document.querySelectorAll('.software-card');
   const profilePict = document.querySelectorAll('.profile-pict');
   const introTexts = document.querySelectorAll('.anim-home');
   const buttonHome = document.querySelectorAll('.button-link-home');
@@ -24,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   addVisible(skillCards);
-  addVisible(softUpCards);
-  addVisible(softDownCards);
+  addVisible(softCards);
   addVisible(introTexts);
   addVisible(buttonHome);
   addVisible(profilePict);
@@ -39,8 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function checkScroll() {
       addVisible(skillCards);
-      addVisible(softUpCards);
-      addVisible(softDownCards);
+      addVisible(softCards);
       addVisible(introTexts);
       addVisible(buttonHome);
       addVisible(profilePict);
